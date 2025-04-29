@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袁崇惟 Victor Yuan - Data Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white">
+    <!-- Navigation -->
+    <nav class="bg-white fixed w-full z-10 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <a href="index.html" class="flex items-center py-4">
+                            <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
+                        </a>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="index.html" class="py-4 px-2 text-blue-600 font-mono">首頁</a>
+                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">作品集</a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">聯絡我</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="text-left">
+                    <h1 class="hero-title">袁崇惟<br>Victor Yuan</h1>
+                    <div class="institute-info">
+                        <p class="text-gray-600 institute-name">Indian Institute of Technology Guwahati</p>
+                        <p class="text-gray-600 dsai-title">Data Science and Artificial Intelligence</p>
+                        <p class="text-gray-600 font-mono role-title">Data Engineer</p>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed description-text">
+                        資料工程師，擅長運用 Python、Airflow、SQL 和 Tableau 等工具。
+                        擁有一人專案經驗，致力於將複雜的資料轉化為有價值的Insight。
+                    </p>
+                </div>
+                <div class="profile-image">
+                    <img src="images/profile.jpg" alt="Victor Yuan" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cover Image Section -->
+    <section class="relative h-[450px] overflow-hidden">
+        <img src="images/cover.jpg" alt="Cover" class="w-full h-full object-cover">
+        <div class="cover-overlay absolute inset-0"></div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-16 px-4 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title text-center mb-12">專業技能</h2>
+            <div class="skills-grid">
+                <div class="bg-white p-8 rounded-lg">
+                    <h3 class="text-xl font-mono text-gray-900 mb-6">資料工程</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="images/logo/linux.png" alt="Linux" class="tech-logo">
+                            Linux 系統建置
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/logo/python-logo.png" alt="Python" class="tech-logo">
+                            Python 開發
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/logo/sql-logo.png" alt="SQL" class="tech-logo">
+                            SQL 資料庫架設
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg">
+                    <h3 class="text-xl font-mono text-gray-900 mb-6">雲端技術</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="images/logo/gcp-logo.png" alt="GCP" class="tech-logo">
+                            GCP 雲端平台建構
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/logo/bigquery-logo.png" alt="BigQuery" class="tech-logo">
+                            BigQuery
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg">
+                    <h3 class="text-xl font-mono text-gray-900 mb-6">資料分析</h3>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <img src="images/logo/tableau-logo.png" alt="Tableau" class="tech-logo">
+                            Tableau Cloud 建構
+                        </div>
+                        <div class="tech-item">
+                            <img src="images/logo/pandas-logo.png" alt="Pandas" class="tech-logo">
+                            Pandas 資料處理
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Preview -->
+    <section class="py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="section-title mb-12">精選作品</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="project-card bg-white">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 mb-6">
+                        <img src="images/project1.jpg" alt="ETL Project" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-mono text-gray-900 mb-4">ETL自動化流程設計</h3>
+                        <p class="text-gray-600 mb-4">
+                            設計並實現自動化ETL流程，使用Apache Airflow進行排程管理，
+                            整合多個數據源。
+                        </p>
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">了解更多 &#8594;</a>
+                    </div>
+                </div>
+
+                <div class="project-card bg-white">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 mb-6">
+                        <img src="images/project2.jpg" alt="Tableau Dashboard" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-mono text-gray-900 mb-4">資料視覺化儀表板</h3>
+                        <p class="text-gray-600 mb-4">
+                            使用Tableau開發互動式儀表板，協助團隊快速掌握關鍵績效指標。
+                        </p>
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">了解更多 &#8594;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 border-t border-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <p class="text-gray-600 font-mono">&copy; 2024 Victor Yuan</p>
+        </div>
+    </footer>
+</body>
+</html> 
