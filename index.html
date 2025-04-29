@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +21,22 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-8">
-                    <a href="index.html" class="py-4 px-2 text-blue-600 font-mono">首頁</a>
-                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">作品集</a>
-                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">聯絡我</a>
+                    <button onclick="toggleLanguage()" class="lang-switch nav-link">
+                        <span class="en-content">中文</span>
+                        <span class="zh-content">English</span>
+                    </button>
+                    <a href="index.html" class="py-4 px-2 text-blue-600 nav-link">
+                        <span class="en-content">Home</span>
+                        <span class="zh-content">首頁</span>
+                    </a>
+                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Projects</span>
+                        <span class="zh-content">作品集</span>
+                    </a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Contact</span>
+                        <span class="zh-content">聯絡我</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -41,8 +54,14 @@
                         <p class="text-gray-600 font-mono role-title">Data Engineer</p>
                     </div>
                     <p class="text-gray-600 leading-relaxed description-text">
-                        資料工程師，擅長運用 Python、Airflow、SQL 和 Tableau 等工具。
-                        擁有一人專案經驗，致力於將複雜的資料轉化為有價值的Insight。
+                        <span class="en-content">
+                            Data Engineer proficient in Python, Airflow, SQL, and Tableau.
+                            Experienced in solo projects, dedicated to transforming complex data into valuable insights.
+                        </span>
+                        <span class="zh-content">
+                            資料工程師，擅長運用 Python、Airflow、SQL 和 Tableau 等工具。
+                            擁有獨立專案經驗，致力於將複雜的資料轉化為有價值的洞見。
+                        </span>
                     </p>
                 </div>
                 <div class="profile-image">
@@ -61,32 +80,45 @@
     <!-- Skills Section -->
     <section class="py-16 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="section-title text-center mb-12">專業技能</h2>
+            <h2 class="section-title text-center mb-12">
+                <span class="en-content">Professional Skills</span>
+                <span class="zh-content">專業技能</span>
+            </h2>
             <div class="skills-grid">
                 <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl font-mono text-gray-900 mb-6">資料工程</h3>
+                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                        <span class="en-content">Data Engineering</span>
+                        <span class="zh-content">資料工程</span>
+                    </h3>
                     <div class="tech-stack">
                         <div class="tech-item">
                             <img src="images/logo/linux.png" alt="Linux" class="tech-logo">
-                            Linux 系統建置
+                            <span class="en-content">Linux System Setup</span>
+                            <span class="zh-content">Linux 系統建置</span>
                         </div>
                         <div class="tech-item">
                             <img src="images/logo/python-logo.png" alt="Python" class="tech-logo">
-                            Python 開發
+                            <span class="en-content">Python Development</span>
+                            <span class="zh-content">Python 開發</span>
                         </div>
                         <div class="tech-item">
                             <img src="images/logo/sql-logo.png" alt="SQL" class="tech-logo">
-                            SQL 資料庫架設
+                            <span class="en-content">SQL Database Setup</span>
+                            <span class="zh-content">SQL 資料庫架設</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl font-mono text-gray-900 mb-6">雲端技術</h3>
+                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                        <span class="en-content">Cloud Technology</span>
+                        <span class="zh-content">雲端技術</span>
+                    </h3>
                     <div class="tech-stack">
                         <div class="tech-item">
                             <img src="images/logo/gcp-logo.png" alt="GCP" class="tech-logo">
-                            GCP 雲端平台建構
+                            <span class="en-content">GCP Platform Architecture</span>
+                            <span class="zh-content">GCP 雲端平台建構</span>
                         </div>
                         <div class="tech-item">
                             <img src="images/logo/bigquery-logo.png" alt="BigQuery" class="tech-logo">
@@ -96,15 +128,20 @@
                 </div>
 
                 <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl font-mono text-gray-900 mb-6">資料分析</h3>
+                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                        <span class="en-content">Data Analysis</span>
+                        <span class="zh-content">資料分析</span>
+                    </h3>
                     <div class="tech-stack">
                         <div class="tech-item">
                             <img src="images/logo/tableau-logo.png" alt="Tableau" class="tech-logo">
-                            Tableau Cloud 建構
+                            <span class="en-content">Tableau Cloud Setup</span>
+                            <span class="zh-content">Tableau Cloud 建構</span>
                         </div>
                         <div class="tech-item">
                             <img src="images/logo/pandas-logo.png" alt="Pandas" class="tech-logo">
-                            Pandas 資料處理
+                            <span class="en-content">Pandas Data Processing</span>
+                            <span class="zh-content">Pandas 資料處理</span>
                         </div>
                     </div>
                 </div>
@@ -115,19 +152,34 @@
     <!-- Featured Projects Preview -->
     <section class="py-16 px-4">
         <div class="max-w-6xl mx-auto">
-            <h2 class="section-title mb-12">精選作品</h2>
+            <h2 class="section-title mb-12">
+                <span class="en-content">Featured Projects</span>
+                <span class="zh-content">精選作品</span>
+            </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="project-card bg-white">
                     <div class="aspect-w-16 aspect-h-9 bg-gray-100 mb-6">
                         <img src="images/project1.jpg" alt="ETL Project" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">ETL自動化流程設計</h3>
+                        <h3 class="text-xl font-mono text-gray-900 mb-4">
+                            <span class="en-content">ETL Automation Process Design</span>
+                            <span class="zh-content">ETL自動化流程設計</span>
+                        </h3>
                         <p class="text-gray-600 mb-4">
-                            設計並實現自動化ETL流程，使用Apache Airflow進行排程管理，
-                            整合多個數據源。
+                            <span class="en-content">
+                                Design and implement automated ETL processes using Apache Airflow for scheduling,
+                                integrating multiple data sources.
+                            </span>
+                            <span class="zh-content">
+                                設計並實現自動化ETL流程，使用Apache Airflow進行排程管理，
+                                整合多個數據源。
+                            </span>
                         </p>
-                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">了解更多 &#8594;</a>
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">
+                            <span class="en-content">Learn More →</span>
+                            <span class="zh-content">了解更多 →</span>
+                        </a>
                     </div>
                 </div>
 
@@ -136,11 +188,22 @@
                         <img src="images/project2.jpg" alt="Tableau Dashboard" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">資料視覺化儀表板</h3>
+                        <h3 class="text-xl font-mono text-gray-900 mb-4">
+                            <span class="en-content">Data Visualization Dashboard</span>
+                            <span class="zh-content">資料視覺化儀表板</span>
+                        </h3>
                         <p class="text-gray-600 mb-4">
-                            使用Tableau開發互動式儀表板，協助團隊快速掌握關鍵績效指標。
+                            <span class="en-content">
+                                Develop interactive dashboards using Tableau to help teams quickly grasp key performance indicators.
+                            </span>
+                            <span class="zh-content">
+                                使用Tableau開發互動式儀表板，協助團隊快速掌握關鍵績效指標。
+                            </span>
                         </p>
-                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">了解更多 &#8594;</a>
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">
+                            <span class="en-content">Learn More →</span>
+                            <span class="zh-content">了解更多 →</span>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -153,5 +216,23 @@
             <p class="text-gray-600 font-mono">&copy; 2024 Victor Yuan</p>
         </div>
     </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            html.setAttribute('data-lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        // Set language based on localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('data-lang', savedLang);
+            }
+        });
+    </script>
 </body>
 </html> 

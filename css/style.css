@@ -11,7 +11,7 @@ body {
 }
 
 /* Modern typography */
-h1, h2, h3 {
+h1, h2, h3, .nav-link {
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -189,6 +189,18 @@ h1, h2, h3 {
     border-radius: 50%;
 }
 
+/* Timeline styles */
+.timeline-item h3.section-title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.timeline-item h3.section-title::before {
+    display: none;
+}
+
 /* Form styles */
 .contact-form input,
 .contact-form textarea {
@@ -326,4 +338,51 @@ section.bg-gray-50 {
 footer {
     background-color: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(4px);
+}
+
+/* Language switcher */
+.lang-switch {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    transition: all 0.2s ease;
+}
+
+.lang-switch:hover {
+    background-color: #f3f4f6;
+}
+
+/* Hide content based on language */
+[data-lang="en"] .zh-content {
+    display: none;
+}
+
+[data-lang="zh"] .en-content {
+    display: none;
+}
+
+/* Role title and other headings */
+.role-title, .section-title, .nav-link {
+    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+}
+
+.nav-link {
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Skills section */
+.skills-grid h3.section-title {
+    font-size: 1.25rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.skills-grid h3.section-title::before {
+    display: none;
 } 

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品集 - 袁崇惟 Victor Yuan</title>
+    <title>Projects - 袁崇惟 Victor Yuan</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -21,9 +21,22 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-8">
-                    <a href="index.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">首頁</a>
-                    <a href="projects.html" class="py-4 px-2 text-blue-600 font-mono">作品集</a>
-                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">聯絡我</a>
+                    <button onclick="toggleLanguage()" class="lang-switch nav-link">
+                        <span class="en-content">中文</span>
+                        <span class="zh-content">English</span>
+                    </button>
+                    <a href="index.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Home</span>
+                        <span class="zh-content">首頁</span>
+                    </a>
+                    <a href="projects.html" class="py-4 px-2 text-blue-600 nav-link">
+                        <span class="en-content">Projects</span>
+                        <span class="zh-content">作品集</span>
+                    </a>
+                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Contact</span>
+                        <span class="zh-content">聯絡我</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -34,9 +47,14 @@
         <!-- Projects Header -->
         <header class="pt-32 pb-16 px-4">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="hero-title text-gray-900 mb-8">Protfolio</h1>
+                <h1 class="hero-title text-gray-900 mb-8">Portfolio</h1>
                 <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                    資料工程領域的實際專案經驗，包含 ETL 流程設計、資料視覺化
+                    <span class="en-content">
+                        Real project experience in data engineering, including ETL process design and data visualization
+                    </span>
+                    <span class="zh-content">
+                        資料工程領域的實際專案經驗，包含 ETL 流程設計、資料視覺化
+                    </span>
                 </p>
             </div>
         </header>
@@ -46,13 +64,16 @@
             <div class="max-w-6xl mx-auto">
                 <div class="flex items-center gap-4 mb-8">
                     <img src="images/logo/tableau-logo.png" alt="Tableau" class="w-8 h-8 object-contain">
-                    <h2 class="section-title mb-0">不動產實價登錄視覺化</h2>
+                    <h2 class="section-title mb-0">
+                        <span class="en-content">Real Estate Price Registration Visualization</span>
+                        <span class="zh-content">不動產實價登錄視覺化</span>
+                    </h2>
                 </div>
                 
                 <!-- Tableau Dashboard -->
                 <div class="tableau-container mb-12">
                     <div class='tableauPlaceholder' id='viz1745909293045' style='position: relative'><noscript><a href='#'>
-                    <img alt='儀表板窗格 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP_17104211156880&#47;1&#47;1_rss.png' style='border: none' /></a>
+                    <img alt='Dashboard Panel 1' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP_17104211156880&#47;1&#47;1_rss.png' style='border: none' /></a>
                     </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
                     <param name='site_root' value='' /><param name='name' value='TP_17104211156880&#47;1' />
                     <param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP_17104211156880&#47;1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1745909293045');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='1200px';vizElement.style.height='795px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='1200px';vizElement.style.height='795px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
@@ -60,13 +81,22 @@
 
                 <div class="timeline">
                     <div class="timeline-item">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">1. 資料收集與爬蟲</h3>
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">1. Data Collection and Web Scraping</span>
+                            <span class="zh-content">1. 資料收集與爬蟲</span>
+                        </h3>
                         <p class="text-gray-600 mb-6">
-                            使用 Python 開發爬蟲程式，從實價登錄系統獲取房地產交易資料。
-                            實作座標轉換功能，將地址轉換為經緯度座標。
+                            <span class="en-content">
+                                Developed Python web scraping program to obtain real estate transaction data from the price registration system.
+                                Implemented coordinate conversion functionality to transform addresses into latitude and longitude coordinates.
+                            </span>
+                            <span class="zh-content">
+                                使用 Python 開發爬蟲程式，從實價登錄系統獲取房地產交易資料。
+                                實作座標轉換功能，將地址轉換為經緯度座標。
+                            </span>
                         </p>
                         <div class="mb-6">
-                            <img src="images/Price_Registration.jpg" alt="實價登錄系統" class="w-full rounded-lg shadow-lg">
+                            <img src="images/Price_Registration.jpg" alt="Price Registration System" class="w-full rounded-lg shadow-lg">
                         </div>
                         <div class="code-block">
                             <pre><code>def coordinates(add):
@@ -88,45 +118,100 @@
                     </div>
 
                     <div class="timeline-item">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">2. 資料清洗與前處理</h3>
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">2. Data Cleaning and Preprocessing</span>
+                            <span class="zh-content">2. 資料清洗與前處理</span>
+                        </h3>
                         <p class="text-gray-600 mb-6">
-                            對爬取的原始資料進行清洗和標準化，處理缺失值、異常值，
-                            並進行必要的資料轉換和編碼。主要工作包括：
+                            <span class="en-content">
+                                Clean and standardize the raw scraped data, handle missing values and outliers,
+                                and perform necessary data transformations and encoding. Main tasks include:
+                            </span>
+                            <span class="zh-content">
+                                對爬取的原始資料進行清洗和標準化，處理缺失值、異常值，
+                                並進行必要的資料轉換和編碼。主要工作包括：
+                            </span>
                         </p>
                         <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                            <li>移除重複和無效資料</li>
-                            <li>統一日期和金額格式</li>
-                            <li>處理特殊字元和編碼問題</li>
-                            <li>補充缺失的地理資訊</li>
+                            <li>
+                                <span class="en-content">Remove duplicate and invalid data</span>
+                                <span class="zh-content">移除重複和無效資料</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Standardize date and amount formats</span>
+                                <span class="zh-content">統一日期和金額格式</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Handle special characters and encoding issues</span>
+                                <span class="zh-content">處理特殊字元和編碼問題</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Supplement missing geographical information</span>
+                                <span class="zh-content">補充缺失的地理資訊</span>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="timeline-item">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">3. ETL 流程實作</h3>
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">3. ETL Process Implementation</span>
+                            <span class="zh-content">3. ETL 流程實作</span>
+                        </h3>
                         <p class="text-gray-600 mb-6">
-                            設計並實現 ETL 流程，將處理後的資料存入 SQL 資料庫。
-                            建立自動化流程，確保資料的即時性和一致性。
+                            <span class="en-content">
+                                Design and implement ETL processes to store processed data in SQL database.
+                                Establish automation workflow to ensure data timeliness and consistency.
+                            </span>
+                            <span class="zh-content">
+                                設計並實現 ETL 流程，將處理後的資料存入 SQL 資料庫。
+                                建立自動化流程，確保資料的即時性和一致性。
+                            </span>
                         </p>
                     </div>
 
                     <div class="timeline-item">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">4. Tableau 視覺化設計</h3>
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">4. Tableau Visualization Design</span>
+                            <span class="zh-content">4. Tableau 視覺化設計</span>
+                        </h3>
                         <p class="text-gray-600 mb-6">
-                            使用 Tableau 建立互動式儀表板，包含：
+                            <span class="en-content">Create interactive dashboards using Tableau, including:</span>
+                            <span class="zh-content">使用 Tableau 建立互動式儀表板，包含：</span>
                         </p>
                         <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
-                            <li>房價趨勢分析</li>
-                            <li>地理位置分布圖</li>
-                            <li>房型和價格關係分析</li>
-                            <li>交易量變化趨勢</li>
+                            <li>
+                                <span class="en-content">Housing price trend analysis</span>
+                                <span class="zh-content">房價趨勢分析</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Geographic distribution map</span>
+                                <span class="zh-content">地理位置分布圖</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Housing type and price relationship analysis</span>
+                                <span class="zh-content">房型和價格關係分析</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Transaction volume trend</span>
+                                <span class="zh-content">交易量變化趨勢</span>
+                            </li>
                         </ul>
                     </div>
 
                     <div class="timeline-item">
-                        <h3 class="text-xl font-mono text-gray-900 mb-4">5. 系統維護與優化</h3>
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">5. System Maintenance and Optimization</span>
+                            <span class="zh-content">5. 系統維護與優化</span>
+                        </h3>
                         <p class="text-gray-600">
-                            負責維護和優化整個系統，包括資料更新機制、效能調校，
-                            以及根據使用者回饋持續改進視覺化呈現方式。
+                            <span class="en-content">
+                                Responsible for maintaining and optimizing the entire system, including data update mechanisms,
+                                performance tuning, and continuous improvement of visualization based on user feedback.
+                            </span>
+                            <span class="zh-content">
+                                負責維護和優化整個系統，包括資料更新機制、效能調校，
+                                以及根據使用者回饋持續改進視覺化呈現方式。
+                            </span>
                         </p>
                     </div>
                 </div>
@@ -140,5 +225,23 @@
             <p class="text-gray-600 font-mono">&copy; 2024 Victor Yuan</p>
         </div>
     </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            html.setAttribute('data-lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        // Set language based on localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('data-lang', savedLang);
+            }
+        });
+    </script>
 </body>
 </html> 

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="en" data-lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>聯絡我 - 袁崇惟 Victor Yuan</title>
+    <title>Contact - 袁崇惟 Victor Yuan</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Space+Mono:wght@400;700&family=Yu+Mincho:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="bg-white">
@@ -22,71 +21,115 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-8">
-                    <a href="index.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">首頁</a>
-                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 font-mono">作品集</a>
-                    <a href="contact.html" class="py-4 px-2 text-blue-600 font-mono">聯絡我</a>
+                    <button onclick="toggleLanguage()" class="lang-switch nav-link">
+                        <span class="en-content">中文</span>
+                        <span class="zh-content">English</span>
+                    </button>
+                    <a href="index.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Home</span>
+                        <span class="zh-content">首頁</span>
+                    </a>
+                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                        <span class="en-content">Projects</span>
+                        <span class="zh-content">作品集</span>
+                    </a>
+                    <a href="contact.html" class="py-4 px-2 text-blue-600 nav-link">
+                        <span class="en-content">Contact</span>
+                        <span class="zh-content">聯絡我</span>
+                    </a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Contact Section -->
-    <section class="pt-32 pb-20 px-4">
-        <div class="max-w-4xl mx-auto">
-            <h1 class="hero-title text-gray-900 mb-8 text-center">聯絡我</h1>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16">
-                <!-- Contact Information -->
-                <div class="bg-white p-8 rounded-lg">
-                    <h2 class="text-2xl font-mono text-gray-900 mb-8">聯絡資訊</h2>
-                    <div class="space-y-6">
-                        <div>
-                            <h3 class="text-lg font-mono text-gray-700 mb-2">Email</h3>
-                            <a href="mailto:vic712y@gmail.com" class="text-blue-600 hover:text-blue-800 font-mono">
-                                vic712y@gmail.com
-                            </a>
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Contact Header -->
+        <header class="pt-32 pb-16 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="hero-title text-gray-900 mb-8">
+                    <span class="en-content">Contact Me</span>
+                    <span class="zh-content">聯絡我</span>
+                </h1>
+            </div>
+        </header>
+
+        <!-- Contact Information -->
+        <section class="py-16 px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div>
+                        <h2 class="section-title mb-8">
+                            <span class="en-content">Contact Information</span>
+                            <span class="zh-content">聯絡資訊</span>
+                        </h2>
+                        <div class="space-y-6">
+                            <div>
+                                <h3 class="text-lg font-mono text-gray-900 mb-2">
+                                    <span class="en-content">Email</span>
+                                    <span class="zh-content">電子郵件</span>
+                                </h3>
+                                <p class="text-gray-600">vic712y@gmail.com</p>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-mono text-gray-900 mb-2">
+                                    <span class="en-content">Location</span>
+                                    <span class="zh-content">地點</span>
+                                </h3>
+                                <p class="text-gray-600">Taiwan</p>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="text-lg font-mono text-gray-700 mb-2">地點</h3>
-                            <p class="text-gray-600">台灣</p>
-                        </div>
-                        <div class="pt-6">
-                            <p class="text-gray-600">
+                        <p class="mt-8 text-gray-600">
+                            <span class="en-content">
+                                If you're interested in my work or would like to discuss collaboration opportunities,
+                                feel free to contact me anytime.
+                            </span>
+                            <span class="zh-content">
                                 如果您對我的作品感興趣，或是想討論合作機會，
                                 歡迎隨時與我聯繫。
-                            </p>
-                        </div>
+                            </span>
+                        </p>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div>
+                        <h2 class="section-title mb-8">
+                            <span class="en-content">Send Message</span>
+                            <span class="zh-content">傳送訊息</span>
+                        </h2>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="name">
+                                    <span class="en-content">Name</span>
+                                    <span class="zh-content">姓名</span>
+                                </label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="email">
+                                    <span class="en-content">Email</span>
+                                    <span class="zh-content">電子郵件</span>
+                                </label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2" for="message">
+                                    <span class="en-content">Message</span>
+                                    <span class="zh-content">訊息</span>
+                                </label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">
+                                <span class="en-content">Send Message</span>
+                                <span class="zh-content">送出訊息</span>
+                            </button>
+                        </form>
                     </div>
                 </div>
-
-                <!-- Contact Form -->
-                <div class="bg-white p-8 rounded-lg">
-                    <h2 class="text-2xl font-mono text-gray-900 mb-8">傳送訊息</h2>
-                    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
-                        <div class="mb-6">
-                            <label for="name" class="block text-gray-700 mb-2 font-mono">姓名</label>
-                            <input type="text" id="name" name="name" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                        </div>
-                        <div class="mb-6">
-                            <label for="email" class="block text-gray-700 mb-2 font-mono">Email</label>
-                            <input type="email" id="email" name="email" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500">
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 mb-2 font-mono">訊息</label>
-                            <textarea id="message" name="message" rows="4" required
-                                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"></textarea>
-                        </div>
-                        <button type="submit"
-                            class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-mono">
-                            送出訊息
-                        </button>
-                    </form>
-                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="py-12 px-4 border-t border-gray-100">
@@ -94,5 +137,23 @@
             <p class="text-gray-600 font-mono">&copy; 2024 Victor Yuan</p>
         </div>
     </footer>
+
+    <script>
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            html.setAttribute('data-lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+        }
+
+        // Set language based on localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('data-lang', savedLang);
+            }
+        });
+    </script>
 </body>
 </html> 
