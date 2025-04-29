@@ -27,22 +27,9 @@ This is a static website built with modern CSS and responsive design principles.
 
 This site is deployed on Cloudflare Pages.
 
-## 特色
-
-- 清爽專業的設計風格
-- 完全響應式布局
-- 優化的使用者體驗
-- 模組化的代碼結構
-- 預留擴充空間（如部落格功能）
-
-## 本地開發
-
-1. 克隆此專案到本地
-2. 使用網頁伺服器（如 Python 的 SimpleHTTPServer）運行：
    ```bash
    python -m http.server 8000
    ```
-3. 在瀏覽器中訪問 `http://localhost:8000`
 
 ## 未來擴充
 
