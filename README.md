@@ -23,28 +23,7 @@ This is my personal portfolio website showcasing my data engineering projects an
 
 This is a static website built with modern CSS and responsive design principles.
 
-## Deployment
 
-This site is deployed on Cloudflare Pages.
-
-   ```bash
-   python -m http.server 8000
-   ```
-
-## 未來擴充
-
-- 新增部落格功能
-- 整合更多互動效果
-- 加入作品集圖片輪播
-- 新增更多專案展示
-- 優化表單提交功能
-
-## 維護與更新
-
-- 定期更新作品集內容
-- 保持技術堆疊的更新
-- 優化使用者體驗
-- 確保響應式設計的兼容性
 
 ## 聯絡方式
 
