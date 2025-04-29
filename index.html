@@ -10,30 +10,28 @@
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="bg-white fixed w-full z-10 border-b border-gray-100">
-        <div class="max-w-6xl mx-auto px-4">
+    <nav class="fixed w-full z-10">
+        <div class="container">
             <div class="flex justify-between">
-                <div class="flex space-x-7">
-                    <div>
-                        <a href="index.html" class="flex items-center py-4">
-                            <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
-                        </a>
-                    </div>
+                <div class="flex">
+                    <a href="index.html" class="nav-logo">
+                        <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
+                    </a>
                 </div>
-                <div class="flex items-center space-x-8">
-                    <button onclick="toggleLanguage()" class="lang-switch nav-link">
+                <div class="nav-links-container">
+                    <button onclick="toggleLanguage()" class="lang-switch">
                         <span class="en-content">中文</span>
                         <span class="zh-content">English</span>
                     </button>
-                    <a href="index.html" class="py-4 px-2 text-blue-600 nav-link">
+                    <a href="index.html" class="nav-link text-blue-600">
                         <span class="en-content">Home</span>
                         <span class="zh-content">首頁</span>
                     </a>
-                    <a href="projects.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                    <a href="projects.html" class="nav-link">
                         <span class="en-content">Projects</span>
                         <span class="zh-content">作品集</span>
                     </a>
-                    <a href="contact.html" class="py-4 px-2 text-gray-500 hover:text-blue-600 transition duration-300 nav-link">
+                    <a href="contact.html" class="nav-link">
                         <span class="en-content">Contact</span>
                         <span class="zh-content">聯絡我</span>
                     </a>
@@ -211,9 +209,15 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-gray-100">
-        <div class="max-w-6xl mx-auto text-center">
-            <p class="text-gray-600 font-mono">&copy; 2024 Victor Yuan</p>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-copyright">
+                &copy; 2025 Victor Yuan. All rights reserved.
+            </div>
+            <div class="footer-links">
+                <a href="#privacy" class="mr-6">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+            </div>
         </div>
     </footer>
 
