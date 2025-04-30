@@ -171,6 +171,12 @@
             const newLang = currentLang === 'en' ? 'zh' : 'en';
             html.setAttribute('data-lang', newLang);
             localStorage.setItem('preferredLanguage', newLang);
+            
+            // Track language switch
+            gtag('event', 'language_switch', {
+                'from_language': currentLang,
+                'to_language': newLang
+            });
         }
 
         document.addEventListener('DOMContentLoaded', function() {
@@ -178,6 +184,81 @@
             if (savedLang) {
                 document.documentElement.setAttribute('data-lang', savedLang);
             }
+
+            // Track page load time
+            window.addEventListener('load', function() {
+                const pageLoadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+                gtag('event', 'page_load_time', {
+                    'load_time': pageLoadTime,
+                    'page': window.location.pathname
+                });
+            });
+
+            // Track scroll depth
+            let tracked25 = false, tracked50 = false, tracked75 = false, tracked100 = false;
+            window.addEventListener('scroll', function() {
+                const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+                
+                if(scrollPercent > 25 && !tracked25) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '25%',
+                        'page': window.location.pathname
+                    });
+                    tracked25 = true;
+                }
+                if(scrollPercent > 50 && !tracked50) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '50%',
+                        'page': window.location.pathname
+                    });
+                    tracked50 = true;
+                }
+                if(scrollPercent > 75 && !tracked75) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '75%',
+                        'page': window.location.pathname
+                    });
+                    tracked75 = true;
+                }
+                if(scrollPercent > 90 && !tracked100) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '100%',
+                        'page': window.location.pathname
+                    });
+                    tracked100 = true;
+                }
+            });
+
+            // Track page visibility
+            document.addEventListener('visibilitychange', function() {
+                gtag('event', 'page_visibility', {
+                    'state': document.hidden ? 'hidden' : 'visible',
+                    'page': window.location.pathname
+                });
+            });
+
+            // Track external link clicks
+            document.querySelectorAll('a').forEach(link => {
+                if (link.hostname && link.hostname !== window.location.hostname) {
+                    link.addEventListener('click', function(e) {
+                        gtag('event', 'external_link_click', {
+                            'link_url': this.href,
+                            'link_text': this.textContent.trim(),
+                            'page': window.location.pathname
+                        });
+                    });
+                }
+            });
+
+            // Track time on page
+            let startTime = Date.now();
+            window.addEventListener('beforeunload', function() {
+                const timeSpent = Math.round((Date.now() - startTime) / 1000);
+                gtag('event', 'time_on_page', {
+                    'seconds': timeSpent,
+                    'page': window.location.pathname
+                });
+            });
         });
     </script>
 </body>

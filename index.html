@@ -4,6 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vic Y - Portfolio</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Data Engineer portfolio showcasing expertise in Python, Airflow, SQL, and Tableau. Specialized in ETL process design and data visualization.">
+    <meta name="keywords" content="Data Engineer, ETL, Python, Airflow, SQL, Tableau, Data Visualization">
+    <meta name="author" content="Victor Yuan">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Vic Y - Data Engineer Portfolio">
+    <meta property="og:description" content="Data Engineer portfolio showcasing expertise in Python, Airflow, SQL, and Tableau.">
+    <meta property="og:image" content="https://vic712y.github.io/portfolio/images/profile.jpg">
+    <meta property="og:url" content="https://vic712y.github.io/portfolio/">
+    
+    <!-- Structured Data for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Victor Yuan",
+      "jobTitle": "Data Engineer",
+      "url": "https://vic712y.github.io/portfolio/",
+      "sameAs": [
+        "https://github.com/vic712y"
+      ],
+      "knowsAbout": ["Data Engineering", "ETL", "Python", "SQL", "Tableau"]
+    }
+    </script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5JFB368K"></script>
     <script>
@@ -236,29 +262,51 @@
     </footer>
 
     <script>
-        function toggleLanguage() {
-            const html = document.documentElement;
-            const currentLang = html.getAttribute('data-lang');
-            const newLang = currentLang === 'en' ? 'zh' : 'en';
-            html.setAttribute('data-lang', newLang);
-            localStorage.setItem('preferredLanguage', newLang);
-            
-            // 添加語言切換追蹤
-            gtag('event', 'language_switch', {
-                'from_language': currentLang,
-                'to_language': newLang,
+        // Enhanced GA4 Event Tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // 追蹤頁面載入時間
+            const pageLoadTime = window.performance.timing.loadEventEnd - window.performance.timing.navigationStart;
+            gtag('event', 'page_load_time', {
+                'time_ms': pageLoadTime,
                 'page': window.location.pathname
             });
-        }
 
-        // 設置語言
-        document.addEventListener('DOMContentLoaded', function() {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang) {
-                document.documentElement.setAttribute('data-lang', savedLang);
-            }
+            // 追蹤頁面可視度
+            let isVisible = true;
+            let startTime = Date.now();
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    isVisible = false;
+                } else {
+                    isVisible = true;
+                    startTime = Date.now();
+                }
+            });
 
-            // 添加滾動深度追蹤
+            // 追蹤頁面停留時間
+            window.addEventListener('beforeunload', function() {
+                if (isVisible) {
+                    const timeSpent = Math.round((Date.now() - startTime) / 1000);
+                    gtag('event', 'time_on_page', {
+                        'time_seconds': timeSpent,
+                        'page': window.location.pathname
+                    });
+                }
+            });
+
+            // 追蹤外部連結點擊
+            document.querySelectorAll('a').forEach(link => {
+                if (link.hostname !== window.location.hostname) {
+                    link.addEventListener('click', function() {
+                        gtag('event', 'external_link_click', {
+                            'link_url': this.href,
+                            'link_text': this.textContent
+                        });
+                    });
+                }
+            });
+
+            // 追蹤滾動深度
             let tracked25 = false;
             let tracked50 = false;
             let tracked75 = false;
@@ -296,6 +344,29 @@
                     tracked100 = true;
                 }
             });
+        });
+
+        function toggleLanguage() {
+            const html = document.documentElement;
+            const currentLang = html.getAttribute('data-lang');
+            const newLang = currentLang === 'en' ? 'zh' : 'en';
+            html.setAttribute('data-lang', newLang);
+            localStorage.setItem('preferredLanguage', newLang);
+            
+            // 語言切換追蹤
+            gtag('event', 'language_switch', {
+                'from_language': currentLang,
+                'to_language': newLang,
+                'page': window.location.pathname
+            });
+        }
+
+        // 設置語言
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                document.documentElement.setAttribute('data-lang', savedLang);
+            }
         });
     </script>
 </body>
