@@ -18,7 +18,7 @@ h1, h2, h3, .nav-link {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 900;
     font-size: 8rem;
-    line-height: 0.8;
+    line-height: 0.9;
     position: relative;
     margin-bottom: 0rem;
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
@@ -316,8 +316,8 @@ nav .container {
     }
 
     .description-text {
-        margin-top: 3rem;
-        font-size: 0.9rem;
+        margin-top: 6rem;
+        font-size: 3rem;
     }
 
     .role-title {
@@ -379,8 +379,8 @@ footer {
 }
 
 .description-text {
-    font-size: 1.125rem;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1;
 }
 
 /* Cover image */
