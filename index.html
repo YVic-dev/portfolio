@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>袁崇惟 Victor Yuan - Data Engineer</title>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE5JFB368K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-HE5JFB368K');
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -234,14 +242,60 @@
             const newLang = currentLang === 'en' ? 'zh' : 'en';
             html.setAttribute('data-lang', newLang);
             localStorage.setItem('preferredLanguage', newLang);
+            
+            // 添加語言切換追蹤
+            gtag('event', 'language_switch', {
+                'from_language': currentLang,
+                'to_language': newLang,
+                'page': window.location.pathname
+            });
         }
 
-        // Set language based on localStorage
+        // 設置語言
         document.addEventListener('DOMContentLoaded', function() {
             const savedLang = localStorage.getItem('preferredLanguage');
             if (savedLang) {
                 document.documentElement.setAttribute('data-lang', savedLang);
             }
+
+            // 添加滾動深度追蹤
+            let tracked25 = false;
+            let tracked50 = false;
+            let tracked75 = false;
+            let tracked100 = false;
+
+            window.addEventListener('scroll', function() {
+                const scrollPercent = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight * 100;
+                
+                if(scrollPercent > 25 && !tracked25) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '25%',
+                        'page': window.location.pathname
+                    });
+                    tracked25 = true;
+                }
+                if(scrollPercent > 50 && !tracked50) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '50%',
+                        'page': window.location.pathname
+                    });
+                    tracked50 = true;
+                }
+                if(scrollPercent > 75 && !tracked75) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '75%',
+                        'page': window.location.pathname
+                    });
+                    tracked75 = true;
+                }
+                if(scrollPercent > 90 && !tracked100) {
+                    gtag('event', 'scroll_depth', {
+                        'depth': '100%',
+                        'page': window.location.pathname
+                    });
+                    tracked100 = true;
+                }
+            });
         });
     </script>
 </body>
