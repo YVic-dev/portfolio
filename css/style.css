@@ -18,12 +18,13 @@ h1, h2, h3, .nav-link {
     font-family: 'Bebas Neue', sans-serif;
     font-weight: 900;
     font-size: 8rem;
-    line-height: 0.9;
+    line-height: 1.1;
     position: relative;
     margin-bottom: 0rem;
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    padding: 0.5rem 0;
 }
 
 .section-title {
@@ -187,14 +188,9 @@ nav .container {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-title {
-        font-weight: 900;
         font-size: 5rem;
-        line-height: 0.8;
-        position: relative;
-        margin-bottom: 0rem;
-        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        line-height: 1.2;
+        padding: 0.5rem 0;
     }
     
     .skills-grid {
@@ -382,13 +378,62 @@ nav .container {
 
     /* 調整手機版導航列高度 */
     .h-20 {
-        height: 3.5rem !important;  /* 從 5rem 減少到 3.5rem */
+        height: 2.5rem !important;  /* 從 3.5rem 減少到 2.5rem */
     }
 
     /* 確保 logo 大小適中 */
     .logo-image {
         width: 24px;
         height: 24px;
+    }
+
+    /* Mobile Navigation */
+    .nav-container {
+        padding: 0.35rem 1rem; /* 進一步減少上下padding */
+    }
+
+    .nav-logo {
+        height: 1.75rem; /* 進一步縮小logo高度 */
+    }
+
+    .nav-menu {
+        padding: 0.35rem 0; /* 進一步減少選單上下padding */
+    }
+
+    .nav-menu li {
+        margin: 0.35rem 0; /* 進一步減少選單項目間距 */
+    }
+
+    .nav-menu a {
+        padding: 0.35rem 0.75rem; /* 進一步減少按鈕內邊距 */
+        font-size: 0.85rem; /* 進一步縮小字體 */
+        line-height: 1.5; /* 確保文字不會被切到 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.75rem; /* 確保按鈕有足夠高度 */
+    }
+
+    .language-switch {
+        margin-left: 0.35rem; /* 進一步減少語言切換按鈕左邊距 */
+    }
+
+    .language-switch button {
+        padding: 0.15rem 0.5rem; /* 進一步減少按鈕內邊距 */
+        font-size: 0.8rem; /* 進一步縮小字體 */
+        line-height: 1; /* 確保文字垂直置中 */
+        height: 1.5rem; /* 固定按鈕高度 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        padding: 0.35rem; /* 進一步調整漢堡選單按鈕大小 */
+    }
+
+    .menu-toggle span {
+        height: 1.5px; /* 進一步減小漢堡選單線條粗細 */
     }
 }
 
@@ -594,4 +639,90 @@ footer {
 
 .skills-grid h3.section-title::before {
     display: none;
+}
+
+/* 調整導航列高度 */
+.h-20 {
+    height: 3rem !important;  /* 從 5rem 減少到 3rem */
+}
+
+/* 調整電腦版導航列樣式 */
+@media (min-width: 769px) {
+    .nav-container {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-logo {
+        height: 2rem;
+    }
+
+    .nav-menu a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+        line-height: 1.5; /* 確保文字不會被切到 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 2rem; /* 確保按鈕有足夠高度 */
+    }
+
+    .language-switch button {
+        padding: 0.25rem 0.75rem;
+        font-size: 0.9rem;
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    .nav-container {
+        padding: 0.35rem 1rem;
+    }
+
+    .nav-logo {
+        height: 1.75rem;
+    }
+
+    .nav-menu {
+        padding: 0.35rem 0;
+    }
+
+    .nav-menu li {
+        margin: 0.35rem 0;
+    }
+
+    .nav-menu a {
+        padding: 0.35rem 0.75rem;
+        font-size: 0.85rem;
+        line-height: 1.5; /* 確保文字不會被切到 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 1.75rem; /* 確保按鈕有足夠高度 */
+    }
+
+    .language-switch {
+        margin-left: 0.35rem;
+    }
+
+    .language-switch button {
+        padding: 0.15rem 0.5rem;
+        font-size: 0.8rem;
+        line-height: 1;
+        height: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        padding: 0.35rem;
+    }
+
+    .menu-toggle span {
+        height: 1.5px;
+    }
 } 
