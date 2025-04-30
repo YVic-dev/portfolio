@@ -331,7 +331,7 @@ nav .container {
         font-size: 9rem;
         line-height: 1;
         margin-bottom: 0.2rem;
-        background: linear-gradient(135deg, #2563eb 100%, #1d4ed8 100%);
+        background: linear-gradient(135deg, var(--color-primary) 0%, #B9B28A 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
