@@ -129,27 +129,27 @@
                                 注意：此為示範用聯絡表單。如需直接聯繫，請使用上方的聯絡資訊。
                             </span>
                         </p>
-                        <form class="space-y-6">
+                        <form action="https://formspree.io/f/272656386794035518" method="POST" class="space-y-6">
                             <div>
                                 <label class="block text-gray-700 mb-2" for="name">
                                     <span class="en-content">Name</span>
                                     <span class="zh-content">姓名</span>
                                 </label>
-                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label class="block text-gray-700 mb-2" for="email">
                                     <span class="en-content">Email</span>
                                     <span class="zh-content">電子郵件</span>
                                 </label>
-                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500">
                             </div>
                             <div>
                                 <label class="block text-gray-700 mb-2" for="message">
                                     <span class="en-content">Message</span>
                                     <span class="zh-content">訊息</span>
                                 </label>
-                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
+                                <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"></textarea>
                             </div>
                             <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 transition duration-300 font-medium">
                                 <span class="en-content">Send Message</span>
