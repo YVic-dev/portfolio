@@ -53,11 +53,12 @@ h1, h2, h3, .nav-link {
 
 /* Profile image */
 .profile-image {
-    border-radius: 1rem;
+    border-radius: 0rem;
     overflow: hidden;
     max-width: 400px;
     margin-left: auto;
     position: relative;
+    aspect-ratio: 1/1;  /* 保持正方形比例 */
 }
 
 .profile-image::after {
@@ -65,13 +66,14 @@ h1, h2, h3, .nav-link {
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
-    border-radius: 1rem;
+    border-radius: 0rem;
 }
 
 .profile-image img {
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
+    object-position: center 20%;  /* 調整垂直位置，偏上方 */
 }
 
 /* Logo */
@@ -338,6 +340,45 @@ nav .container {
         padding-top: 0.75rem;
         padding-bottom: 1.5rem;
     }
+
+    .cover-image {
+        height: 100px;  /* 減少手機版的高度 */
+        object-position: center 20%;  /* 進一步調整手機版的圖片位置 */
+    }
+
+    /* 調整專案圖片高度 */
+    .project-card .aspect-w-16 {
+        height: 100px !important;  /* 減少專案圖片高度 */
+    }
+    
+    .project-card .aspect-w-16 img {
+        object-position: center 20%;  /* 調整圖片垂直位置 */
+        height: 100px !important;  /* 確保圖片高度也是 100px */
+        object-fit: cover;  /* 確保圖片填滿容器 */
+    }
+
+    /* 移除 aspect ratio 的限制 */
+    .project-card .aspect-w-16.aspect-h-9 {
+        height: 100px !important;
+        aspect-ratio: auto !important;
+    }
+
+    /* 調整專案介紹文字大小 */
+    .text-xl.text-gray-600 {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+
+    /* 調整手機版個人照片大小 */
+    .profile-image {
+        max-width: 300px;
+        margin: 0 auto;
+        aspect-ratio: 1/1;  /* 保持正方形比例 */
+    }
+
+    .profile-image img {
+        object-position: center 10%;  /* 在手機版更偏上方 */
+    }
 }
 
 /* Footer */
@@ -388,6 +429,7 @@ footer {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center 30%;  /* 調整圖片垂直位置，切掉一些上下部分 */
 }
 
 /* Tableau container */
