@@ -1,4 +1,6 @@
 /* Custom styles */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body {
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     font-weight: 400;
@@ -8,30 +10,34 @@ body {
 
 /* Modern typography */
 h1, h2, h3, .nav-link {
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0em;
 }
 
 .hero-title {
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
-    font-weight: 700;
-    font-size: 4rem;
-    line-height: 1.1;
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: 900;
+    font-size: 8rem;
+    line-height: 0.8;
     position: relative;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0rem;
     background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .section-title {
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-weight: 700;
     font-size: 2.5rem;
     color: #1a1a1a;
     position: relative;
     display: inline-block;
+}
+
+/* 調整 Real Estate Price Registration Visualization 標題大小 */
+.section-title.mb-0 {
+    font-size: 1.5rem;  /* 設定較小的字體大小 */
 }
 
 /* Card styles */
@@ -179,15 +185,19 @@ nav .container {
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 3rem;
-    }
-    
-    .section-title {
-        font-size: 2rem;
+        font-weight: 900;
+        font-size: 5rem;
+        line-height: 0.8;
+        position: relative;
+        margin-bottom: 0rem;
+        background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
     
     .skills-grid {
         grid-template-columns: 1fr;
+        gap: 0.5rem;
     }
     
     .nav-links-container {
@@ -196,6 +206,137 @@ nav .container {
     
     .tech-stack {
         grid-template-columns: 1fr;
+        gap: 0.25rem;
+    }
+
+    /* 調整手機版內容邊距 */
+    .max-w-6xl, .max-w-4xl {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    /* 調整專案卡片內容邊距 */
+    .project-card .p-8 {
+        padding-left: 0.4rem !important;
+    }
+
+    .project-content {
+        padding-left: 0.4rem;
+    }
+
+    /* 調整手機版 skills section 標題間距 */
+    .skills-grid h3.section-title {
+        margin-top: 0.75rem;
+        margin-bottom: 0.15rem;
+        font-size: 3.5rem;
+    }
+
+    .skills-grid > div {
+        margin-bottom: 0.5rem;
+        padding: 0.75rem;
+    }
+
+    /* 調整手機版下方欄位高度 */
+    .tech-item {
+        padding: 0.35rem;
+        margin-bottom: 0;
+    }
+
+    .tech-item img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .tech-item span {
+        font-size: 0.85rem;
+    }
+
+    /* 調整 section 的間距 */
+    .py-20 {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /* 調整主標題和內容之間的間距 */
+    .mb-16 {
+        margin-bottom: 0.75rem !important;
+    }
+
+    /* 調整卡片內邊距 */
+    .p-8 {
+        padding: 0.75rem !important;
+    }
+
+    /* 調整專案卡片內的標題間距 */
+    .project-card h3.section-title {
+        margin-top: 0.75rem;
+        margin-bottom: 0.15rem !important;
+        padding-left: 0.4rem;
+        font-size: 1.7rem;
+    }
+
+    /* 調整專案描述文字的間距 */
+    .project-card p {
+        margin-bottom: 0.5rem;
+        padding-left: 0.4rem;
+    }
+
+    /* 調整專案卡片內的連結間距 */
+    .project-card a {
+        padding-left: 0.4rem;
+    }
+
+    /* 調整 Professional Skills 區塊底部間距 */
+    section.bg-white {
+        padding-bottom: 1.5rem;
+    }
+
+    /* 調整 Featured Projects 區塊上下間距 */
+    section.bg-gray-50 {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* 調整學校資訊間距 */
+    .institute-info {
+        margin-top: 1rem;
+        margin-bottom: 3rem;
+    }
+    
+    .institute-name {
+        font-size: 0.9rem;
+        line-height: 0.8;
+        margin-bottom: 0.5rem;
+    }
+
+    .dsai-title {
+        font-size: 1rem;
+        line-height: 1;
+        margin-bottom: 0;
+    }
+
+    .description-text {
+        margin-top: 3rem;
+        font-size: 0.9rem;
+    }
+
+    .role-title {
+        font-size: 9rem;
+        line-height: 1;
+        margin-bottom: 0.2rem;
+        background: linear-gradient(135deg, #2563eb 100%, #1d4ed8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    /* 調整時間軸項目間距 */
+    .timeline-item:first-child {
+        padding-top: 1rem;
+    }
+
+    .timeline-item {
+        padding-top: 0.75rem;
+        padding-bottom: 1.5rem;
     }
 }
 
@@ -220,17 +361,21 @@ footer {
 .institute-name {
     font-size: 1.125rem;
     font-weight: 500;
+    line-height: 0.6;
+    margin-bottom: 0.15rem;
 }
 
 .dsai-title {
     font-size: 1rem;
     color: #6b7280;
+    line-height: 1;
 }
 
 .role-title {
-    font-family: 'Montserrat', monospace;
-    font-size: 1.25rem;
-    color: #2563eb;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: #6b7280;
+    margin-bottom: 0.1rem;
 }
 
 .description-text {
@@ -320,6 +465,7 @@ footer {
 
 /* Timeline styles */
 .timeline-item h3.section-title {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.25rem;
     color: #1a1a1a;
     margin-bottom: 1rem;
@@ -376,8 +522,7 @@ footer {
 
 /* Role title and other headings */
 .role-title, .section-title, .nav-link {
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
-    font-weight: 700;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .nav-link {
@@ -387,6 +532,7 @@ footer {
 
 /* Skills section */
 .skills-grid h3.section-title {
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 1.25rem;
     color: #1a1a1a;
     margin-bottom: 1.5rem;
