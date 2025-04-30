@@ -215,6 +215,165 @@
                 </div>
             </div>
         </section>
+
+        <!-- Presale Registration System Project -->
+        <section class="py-20 px-4 bg-gray-50">
+            <div class="max-w-6xl mx-auto">
+                <div class="flex items-center gap-4 mb-12">
+                    <img src="images/logo/airflow-logo.png" alt="Airflow" class="w-10 h-10 object-contain">
+                    <h2 class="section-title mb-0">
+                        <span class="en-content">Presale Registration ETL System</span>
+                        <span class="zh-content">預售屋實價登錄 ETL 系統</span>
+                    </h2>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">1. Automated Data Collection</span>
+                            <span class="zh-content">1. 自動化資料收集</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span class="en-content">
+                                Developed an automated web scraping system using Selenium and undetected-chromedriver
+                                to collect presale registration data from the government website. The system handles
+                                anti-bot measures and ensures reliable data extraction.
+                            </span>
+                            <span class="zh-content">
+                                使用 Selenium 和 undetected-chromedriver 開發自動化爬蟲系統，
+                                從政府網站收集預售屋實價登錄資料。系統能夠處理反爬蟲機制，
+                                確保資料提取的可靠性。
+                            </span>
+                        </p>
+                        <div class="code-block">
+                            <pre><code>def initialize_driver():
+    options = webdriver.ChromeOptions()
+    options.add_argument("--disable-notifications")
+    options.add_argument('--disable-blink-features=AutomationControlled')
+    options.add_argument("--headless")
+    driver = uc.Chrome(options=options)
+    driver.get('https://lvr.land.moi.gov.tw/')
+    return driver</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">2. Data Processing Pipeline</span>
+                            <span class="zh-content">2. 資料處理流程</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span class="en-content">
+                                Implemented a comprehensive data cleaning and transformation pipeline that includes:
+                            </span>
+                            <span class="zh-content">
+                                實作完整的資料清洗和轉換流程，包含：
+                            </span>
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                            <li>
+                                <span class="en-content">Standardization of building materials and property types</span>
+                                <span class="zh-content">建築材料和物業類型的標準化</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Calculation of property areas and parking spaces</span>
+                                <span class="zh-content">計算物業面積和停車位</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Address normalization and coordinate conversion</span>
+                                <span class="zh-content">地址正規化和座標轉換</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">3. Airflow DAG Implementation</span>
+                            <span class="zh-content">3. Airflow DAG 實作</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span class="en-content">
+                                Designed and implemented an Airflow DAG to orchestrate the ETL process with:
+                            </span>
+                            <span class="zh-content">
+                                設計並實作 Airflow DAG 來協調 ETL 流程，包含：
+                            </span>
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                            <li>
+                                <span class="en-content">Scheduled data collection (1st, 11th, 21st of each month)</span>
+                                <span class="zh-content">排程資料收集（每月 1、11、21 日）</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Automated data cleaning and transformation</span>
+                                <span class="zh-content">自動化資料清洗和轉換</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Coordinate data enrichment</span>
+                                <span class="zh-content">座標資料補充</span>
+                            </li>
+                        </ul>
+                        <div class="code-block">
+                            <pre><code>with DAG(
+    'regist_presale',
+    default_args=default_args,
+    description='ETL process for presale data',
+    schedule_interval='0 0 1,11,21 * *',
+    start_date=datetime(2024, 11, 1),
+    catchup=False
+) as dag:
+    task_etl >> task_clean >> task_coords</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">4. Database Integration</span>
+                            <span class="zh-content">4. 資料庫整合</span>
+                        </h3>
+                        <p class="text-gray-600 mb-6">
+                            <span class="en-content">
+                                Implemented MySQL database integration for storing processed data with:
+                            </span>
+                            <span class="zh-content">
+                                實作 MySQL 資料庫整合來儲存處理後的資料，包含：
+                            </span>
+                        </p>
+                        <ul class="list-disc list-inside text-gray-600 mb-6 space-y-2">
+                            <li>
+                                <span class="en-content">Efficient data storage and retrieval</span>
+                                <span class="zh-content">高效的資料儲存和檢索</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Duplicate detection and handling</span>
+                                <span class="zh-content">重複資料檢測和處理</span>
+                            </li>
+                            <li>
+                                <span class="en-content">Data versioning and history tracking</span>
+                                <span class="zh-content">資料版本控制和歷史追蹤</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="timeline-item">
+                        <h3 class="text-xl text-gray-900 mb-4 section-title">
+                            <span class="en-content">5. System Monitoring and Maintenance</span>
+                            <span class="zh-content">5. 系統監控和維護</span>
+                        </h3>
+                        <p class="text-gray-600">
+                            <span class="en-content">
+                                Established monitoring and maintenance procedures including error handling,
+                                logging, and performance optimization to ensure system reliability.
+                            </span>
+                            <span class="zh-content">
+                                建立監控和維護程序，包含錯誤處理、日誌記錄和效能優化，
+                                以確保系統的可靠性。
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
