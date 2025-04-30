@@ -90,6 +90,7 @@ h1, h2, h3, .nav-link {
 .logo-image {
     width: 32px;
     height: 32px;
+    filter: grayscale(100%);
 }
 
 /* Tech stack */
@@ -118,6 +119,7 @@ h1, h2, h3, .nav-link {
     width: 32px;
     height: 32px;
     object-fit: contain;
+    filter: grayscale(100%);
 }
 
 /* Skills grid */
