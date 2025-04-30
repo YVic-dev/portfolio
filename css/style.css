@@ -756,7 +756,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(245, 243, 233, 0.9); /* 使用淺色背景 */
+    background: rgba(245, 243, 233, 0.5); /* 使用淺色背景 */
     z-index: 1;
 }
 
