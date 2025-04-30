@@ -10,10 +10,10 @@
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed w-full z-10">
-        <div class="container">
-            <div class="flex justify-between">
-                <div class="flex">
+    <nav class="fixed w-full z-10 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
                     <a href="index.html" class="nav-logo">
                         <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
                     </a>
@@ -43,9 +43,9 @@
     <!-- Main Content -->
     <main class="pt-20">
         <!-- Projects Header -->
-        <header class="pt-20 pb-16 px-4">
+        <header class="pt-32 pb-20 px-4 bg-gradient-to-b from-white to-gray-50">
             <div class="max-w-4xl mx-auto text-center">
-                <h1 class="hero-title text-gray-900 mb-8">Portfolio</h1>
+                <h1 class="hero-title mb-8">Portfolio</h1>
                 <p class="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
                     <span class="en-content">
                         Real project experience in data engineering, including ETL process design and data visualization
@@ -58,10 +58,10 @@
         </header>
 
         <!-- Featured Project - Tableau Dashboard -->
-        <section class="py-20 px-4 bg-gray-50 section-spacing">
+        <section class="py-20 px-4 bg-white">
             <div class="max-w-6xl mx-auto">
-                <div class="flex items-center gap-4 mb-8">
-                    <img src="images/logo/tableau-logo.png" alt="Tableau" class="w-8 h-8 object-contain">
+                <div class="flex items-center gap-4 mb-12">
+                    <img src="images/logo/tableau-logo.png" alt="Tableau" class="w-10 h-10 object-contain">
                     <h2 class="section-title mb-0">
                         <span class="en-content">Real Estate Price Registration Visualization</span>
                         <span class="zh-content">不動產實價登錄視覺化</span>
@@ -69,7 +69,7 @@
                 </div>
                 
                 <!-- Tableau Dashboard -->
-                <div class="tableau-container mb-12">
+                <div class="tableau-container mb-16 rounded-xl overflow-hidden shadow-lg">
                     <div class='tableauPlaceholder' id='viz1745909293045' style='position: relative'><noscript><a href='#'>
                     <img alt='Dashboard Panel 1' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;TP&#47;TP_17104211156880&#47;1&#47;1_rss.png' style='border: none' /></a>
                     </noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> 
@@ -93,8 +93,8 @@
                                 實作座標轉換功能，將地址轉換為經緯度座標。
                             </span>
                         </p>
-                        <div class="mb-6">
-                            <img src="images/Price_Registration.jpg" alt="Price Registration System" class="w-full rounded-lg shadow-lg">
+                        <div class="mb-8">
+                            <img src="images/Price_Registration.jpg" alt="Price Registration System" class="w-full rounded-xl shadow-lg">
                         </div>
                         <div class="code-block">
                             <pre><code>def coordinates(add):
@@ -218,14 +218,16 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-copyright">
-                &copy; 2025 Victor Yuan. All rights reserved.
-            </div>
-            <div class="footer-links">
-                <a href="#privacy" class="mr-6">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
+    <footer class="bg-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="footer-copyright text-gray-600 mb-4 md:mb-0">
+                    &copy; 2025 Victor Yuan. All rights reserved.
+                </div>
+                <div class="footer-links space-x-6">
+                    <a href="#privacy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="#terms" class="text-gray-600 hover:text-blue-600">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

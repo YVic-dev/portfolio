@@ -10,10 +10,10 @@
 </head>
 <body class="bg-white">
     <!-- Navigation -->
-    <nav class="fixed w-full z-10">
-        <div class="container">
-            <div class="flex justify-between">
-                <div class="flex">
+    <nav class="fixed w-full z-10 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center">
                     <a href="index.html" class="nav-logo">
                         <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
                     </a>
@@ -41,17 +41,17 @@
     </nav>
 
     <!-- Hero Section -->
-    <header class="pt-32 pb-20 px-4">
+    <header class="pt-32 pb-20 px-4 bg-gradient-to-b from-white to-gray-50">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="text-left">
+                <div class="text-left space-y-6">
                     <h1 class="hero-title">袁崇惟<br>Victor Yuan</h1>
-                    <div class="institute-info">
+                    <div class="institute-info space-y-2">
                         <p class="text-gray-600 institute-name">Indian Institute of Technology Guwahati</p>
                         <p class="text-gray-600 dsai-title">Data Science and Artificial Intelligence</p>
                         <p class="text-gray-600 font-mono role-title">Data Engineer</p>
                     </div>
-                    <p class="text-gray-600 leading-relaxed description-text">
+                    <p class="text-gray-600 leading-relaxed description-text max-w-lg">
                         <span class="en-content">
                             Data Engineer proficient in Python, Airflow, SQL, and Tableau.
                             Experienced in solo projects, dedicated to transforming complex data into valuable insights.
@@ -63,7 +63,7 @@
                     </p>
                 </div>
                 <div class="profile-image">
-                    <img src="images/profile.jpg" alt="Victor Yuan" class="w-full h-full object-cover">
+                    <img src="images/profile.jpg" alt="Victor Yuan" class="w-full h-full object-cover rounded-2xl shadow-xl">
                 </div>
             </div>
         </div>
@@ -76,15 +76,15 @@
     </section>
 
     <!-- Skills Section -->
-    <section class="py-16 px-4 bg-gray-50">
+    <section class="py-20 px-4 bg-white">
         <div class="max-w-6xl mx-auto">
-            <h2 class="section-title text-center mb-12">
+            <h2 class="section-title text-center mb-16">
                 <span class="en-content">Professional Skills</span>
                 <span class="zh-content">專業技能</span>
             </h2>
             <div class="skills-grid">
-                <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl text-gray-900 mb-8 section-title">
                         <span class="en-content">Data Engineering</span>
                         <span class="zh-content">資料工程</span>
                     </h3>
@@ -107,8 +107,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl text-gray-900 mb-8 section-title">
                         <span class="en-content">Cloud Technology</span>
                         <span class="zh-content">雲端技術</span>
                     </h3>
@@ -125,8 +125,8 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-8 rounded-lg">
-                    <h3 class="text-xl text-gray-900 mb-6 section-title">
+                <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+                    <h3 class="text-xl text-gray-900 mb-8 section-title">
                         <span class="en-content">Data Analysis</span>
                         <span class="zh-content">資料分析</span>
                     </h3>
@@ -148,23 +148,23 @@
     </section>
 
     <!-- Featured Projects Preview -->
-    <section class="py-16 px-4">
+    <section class="py-20 px-4 bg-gray-50">
         <div class="max-w-6xl mx-auto">
-            <h2 class="section-title mb-12">
+            <h2 class="section-title mb-16">
                 <span class="en-content">Featured Projects</span>
                 <span class="zh-content">精選作品</span>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <div class="project-card bg-white">
-                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 mb-6">
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                         <img src="images/project1.jpg" alt="ETL Project" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <h3 class="text-xl font-mono text-gray-900 mb-4">
                             <span class="en-content">ETL Automation Process Design</span>
                             <span class="zh-content">ETL自動化流程設計</span>
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-6">
                             <span class="en-content">
                                 Design and implement automated ETL processes using Apache Airflow for scheduling,
                                 integrating multiple data sources.
@@ -174,23 +174,23 @@
                                 整合多個數據源。
                             </span>
                         </p>
-                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800 inline-flex items-center">
                             <span class="en-content">Learn More →</span>
                             <span class="zh-content">了解更多 →</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="project-card bg-white">
-                    <div class="aspect-w-16 aspect-h-9 bg-gray-100 mb-6">
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-100">
                         <img src="images/project2.jpg" alt="Tableau Dashboard" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6">
+                    <div class="p-8">
                         <h3 class="text-xl font-mono text-gray-900 mb-4">
                             <span class="en-content">Data Visualization Dashboard</span>
                             <span class="zh-content">資料視覺化儀表板</span>
                         </h3>
-                        <p class="text-gray-600 mb-4">
+                        <p class="text-gray-600 mb-6">
                             <span class="en-content">
                                 Develop interactive dashboards using Tableau to help teams quickly grasp key performance indicators.
                             </span>
@@ -198,7 +198,7 @@
                                 使用Tableau開發互動式儀表板，協助團隊快速掌握關鍵績效指標。
                             </span>
                         </p>
-                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800">
+                        <a href="projects.html" class="text-blue-600 font-mono hover:text-blue-800 inline-flex items-center">
                             <span class="en-content">Learn More →</span>
                             <span class="zh-content">了解更多 →</span>
                         </a>
@@ -209,14 +209,16 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-copyright">
-                &copy; 2025 Victor Yuan. All rights reserved.
-            </div>
-            <div class="footer-links">
-                <a href="#privacy" class="mr-6">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
+    <footer class="bg-white py-8">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="footer-copyright text-gray-600 mb-4 md:mb-0">
+                    &copy; 2025 Victor Yuan. All rights reserved.
+                </div>
+                <div class="footer-links space-x-6">
+                    <a href="#privacy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="#terms" class="text-gray-600 hover:text-blue-600">Terms of Service</a>
+                </div>
             </div>
         </div>
     </footer>

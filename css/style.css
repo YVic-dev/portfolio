@@ -4,10 +4,6 @@ body {
     font-weight: 400;
     line-height: 1.6;
     background-color: #ffffff;
-    background-image: url('../images/texture/hexagons.svg');
-    background-repeat: repeat;
-    background-position: center;
-    background-size: 28px 49px;
 }
 
 /* Modern typography */
@@ -20,41 +16,22 @@ h1, h2, h3, .nav-link {
 .hero-title {
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     font-weight: 700;
-    font-size: 3.5rem;
-    line-height: 1.2;
+    font-size: 4rem;
+    line-height: 1.1;
     position: relative;
-    margin-bottom: 1.25rem;
-}
-
-.hero-title::after {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 2px;
-    background-color: #2563eb;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .section-title {
     font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
     font-weight: 700;
-    font-size: 2rem;
-    color: #2563eb;
+    font-size: 2.5rem;
+    color: #1a1a1a;
     position: relative;
     display: inline-block;
-}
-
-.section-title::before {
-    content: '';
-    position: absolute;
-    width: 120%;
-    height: 8px;
-    background-color: rgba(37, 99, 235, 0.1);
-    bottom: 0;
-    left: -10%;
-    z-index: -1;
 }
 
 /* Card styles */
@@ -68,33 +45,21 @@ h1, h2, h3, .nav-link {
     transform: translateY(-5px);
 }
 
-.project-card::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background-color: #2563eb;
-    bottom: 0;
-    left: 0;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.project-card:hover::after {
-    transform: scaleX(1);
-}
-
-.project-card h3 {
-    font-family: 'Montserrat', 'Noto Sans TC', sans-serif;
-    font-weight: 700;
-}
-
 /* Profile image */
 .profile-image {
-    border-radius: 8px;
+    border-radius: 1rem;
     overflow: hidden;
     max-width: 400px;
     margin-left: auto;
+    position: relative;
+}
+
+.profile-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(29, 78, 216, 0.1) 100%);
+    border-radius: 1rem;
 }
 
 .profile-image img {
@@ -107,6 +72,170 @@ h1, h2, h3, .nav-link {
 .logo-image {
     width: 32px;
     height: 32px;
+}
+
+/* Tech stack */
+.tech-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.tech-item:hover {
+    background: #f1f5f9;
+    transform: translateY(-2px);
+}
+
+.tech-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+/* Skills grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Navigation */
+nav {
+    transition: all 0.3s ease;
+}
+
+nav .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    position: relative;
+    color: #4b5563;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #2563eb;
+    bottom: -4px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #2563eb;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Language switch */
+.lang-switch {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background: #f1f5f9;
+    color: #4b5563;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.lang-switch:hover {
+    background: #e2e8f0;
+    color: #2563eb;
+}
+
+/* Language content visibility */
+[data-lang="en"] .zh-content {
+    display: none;
+}
+
+[data-lang="zh"] .en-content {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .nav-links-container {
+        gap: 1rem;
+    }
+    
+    .tech-stack {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Footer */
+footer {
+    border-top: 1px solid #e5e7eb;
+}
+
+.footer-links a {
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #2563eb;
+}
+
+/* Institute info */
+.institute-info {
+    color: #4b5563;
+}
+
+.institute-name {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+.dsai-title {
+    font-size: 1rem;
+    color: #6b7280;
+}
+
+.role-title {
+    font-family: 'Montserrat', monospace;
+    font-size: 1.25rem;
+    color: #2563eb;
+}
+
+.description-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
 }
 
 /* Cover image */
@@ -234,230 +363,15 @@ h1, h2, h3, .nav-link {
     margin: 2rem auto;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .section-title {
-        font-size: 1.75rem;
-    }
-    
-    .grid-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .tableau-container {
-        height: auto;
-    }
-    
-    .profile-image {
-        max-width: 320px;
-        margin: 0 auto;
-    }
-}
-
-/* Technology logos */
-.tech-logo {
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-.tech-stack {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-.tech-item {
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    background: #f8fafc;
-    border-radius: 4px;
-    margin: 0;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-}
-
-@media (max-width: 768px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 /* Cover image overlay adjustment */
 .cover-overlay {
     background-color: rgba(30, 64, 175, 0.15);
-}
-
-.institute-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.institute-name {
-    line-height: 1.2;
-    margin-bottom: 0.25rem;
-}
-
-.dsai-title {
-    margin-bottom: 2rem;
-}
-
-.role-title {
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
-}
-
-.description-text {
-    margin-top: 0;
-}
-
-/* Projects Header */
-header {
-    background-color: rgba(255, 255, 255, 0.97);
-}
-
-/* Featured Project Section */
-section.bg-gray-50 {
-    background-color: rgba(249, 250, 251, 0.97);
-    backdrop-filter: blur(4px);
-}
-
-/* Footer */
-footer {
-    height: 4rem;
-    background-color: rgba(255, 255, 255, 0.97);
-    border-top: 1px solid #f3f4f6;
-    display: flex;
-    align-items: center;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    font-size: 0.875rem;
-    color: #6b7280;
-}
-
-.footer-links a {
-    color: #6b7280;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.footer-links a:hover {
-    color: #2563eb;
-}
-
-/* Navigation bar adjustments */
-nav {
-    height: 3.5rem;
-    top: 0;
-    background-color: white;
-    border-bottom: 1px solid #f3f4f6;
-}
-
-nav .container {
-    max-width: 100%;
-    padding: 0;
-    height: 100%;
-    width: 1200px;  /* Match Tableau dashboard width */
-    margin: 0 auto;
-}
-
-nav .flex {
-    height: 100%;
-    align-items: center;
-}
-
-.nav-logo {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-left: 1rem;  /* Match Tableau logo padding */
-}
-
-.nav-links-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    padding-right: 1rem;  /* Match dashboard right padding */
-}
-
-/* Navigation links */
-.nav-link {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    font-size: 0.875rem;
-    position: relative;
-    justify-content: center;
-    width: 5.5rem;  /* Slightly wider for better spacing */
-}
-
-.nav-link span {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    left: 0;
-}
-
-/* Language switcher */
-.lang-switch {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 4rem;  /* Fixed width for language switch */
-    padding: 0;
-    font-size: 0.875rem;
-    color: #4b5563;
-    background-color: transparent;
-    border: none;
-    transition: all 0.2s ease;
-    position: relative;
-}
-
-.lang-switch span {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    left: 0;
-}
-
-.lang-switch:hover {
-    color: #2563eb;
-    background-color: transparent;
 }
 
 /* Section spacing */
 .section-spacing {
     margin-top: 4rem;
     margin-bottom: 4rem;
-}
-
-/* Hide content based on language */
-[data-lang="en"] .zh-content {
-    display: none;
-}
-
-[data-lang="zh"] .en-content {
-    display: none;
 }
 
 /* Role title and other headings */
