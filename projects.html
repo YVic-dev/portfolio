@@ -68,6 +68,17 @@
                     </h2>
                 </div>
                 
+                <div class="text-center mb-8">
+                    <p class="text-gray-600">
+                        <span class="en-content">
+                            👆 Interactive Dashboard: You can explore the data by clicking, dragging, and using the filters below
+                        </span>
+                        <span class="zh-content">
+                            👆 互動式儀表板：您可以點擊、拖曳和使用下方的篩選器來探索資料
+                        </span>
+                    </p>
+                </div>
+                
                 <!-- Tableau Dashboard -->
                 <div class="tableau-container mb-16 rounded-xl overflow-hidden shadow-lg">
                     <div class='tableauPlaceholder' id='viz1745909293045' style='position: relative'><noscript><a href='#'>
@@ -97,21 +108,48 @@
                             <img src="images/Price_Registration.jpg" alt="Price Registration System" class="w-full rounded-xl shadow-lg">
                         </div>
                         <div class="code-block">
-                            <pre><code>def coordinates(add):
-    url = f"https://api.nlsc.gov.tw/idc/TextQueryMap/{add}"
+                            <pre><code># 座標轉換功能說明
+def convert_address_to_coordinates(address):
+    """
+    將地址轉換為經緯度座標
+    使用內政部地政司地址轉換 API
+    回傳格式：[經度, 緯度]
+    """
+    # API 端點設定
+    api_url = f"https://api.nlsc.gov.tw/idc/TextQueryMap/{address}"
+    
+    # 設定請求標頭
     headers = {
         "Content-Type": "application/xml",
-        "Referer": "victor.proagent.com.tw",
+        "Referer": "victor.proagent.com.tw"
     }
+    
     try:
-        response = requests.get(url, headers=headers)
+        # 發送 API 請求
+        response = requests.get(api_url, headers=headers)
         response.raise_for_status()
+        
+        # 解析 XML 回應
         root = ET.fromstring(response.text)
-        location = root.find('.//LOCATION').text
-        location = location.split(",")
-        return location
+        coordinates = root.find('.//LOCATION').text
+        
+        # 回傳經緯度陣列
+        return coordinates.split(",")
+        
     except requests.exceptions.RequestException as e:
-        print("Error occurred:", e)</code></pre>
+        print(f"地址轉換失敗: {e}")
+        return None</code></pre>
+                            <p class="text-gray-600 mt-4">
+                                <span class="en-content">
+                                    This function converts Taiwanese addresses into latitude and longitude coordinates
+                                    using the Ministry of the Interior's address conversion API. It's a crucial part
+                                    of our data processing pipeline for geographic visualization.
+                                </span>
+                                <span class="zh-content">
+                                    此函數使用內政部地政司的地址轉換 API，將台灣地址轉換為經緯度座標。
+                                    這是我們地理視覺化資料處理流程中的重要組成部分。
+                                </span>
+                            </p>
                         </div>
                     </div>
 
@@ -384,8 +422,8 @@
                     &copy; 2025 Victor Yuan. All rights reserved.
                 </div>
                 <div class="footer-links space-x-6">
-                    <a href="#privacy" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
-                    <a href="#terms" class="text-gray-600 hover:text-blue-600">Terms of Service</a>
+                    <a href="privacy.html" class="text-gray-600 hover:text-blue-600">Privacy Policy</a>
+                    <a href="terms.html" class="text-gray-600 hover:text-blue-600">Terms of Service</a>
                 </div>
             </div>
         </div>
