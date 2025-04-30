@@ -379,6 +379,17 @@ nav .container {
     .profile-image img {
         object-position: center 10%;  /* 在手機版更偏上方 */
     }
+
+    /* 調整手機版導航列高度 */
+    .h-20 {
+        height: 3.5rem !important;  /* 從 5rem 減少到 3.5rem */
+    }
+
+    /* 確保 logo 大小適中 */
+    .logo-image {
+        width: 24px;
+        height: 24px;
+    }
 }
 
 /* Footer */
