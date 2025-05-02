@@ -23,8 +23,8 @@
             <div class="flex justify-between items-center h-20">
                 <div class="flex items-center">
                     <a href="index.html" class="nav-logo">
-                        <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
-                    </a>
+                            <img src="images/logo.png" alt="Victor Yuan Logo" class="logo-image">
+                        </a>
                 </div>
                 <div class="nav-links-container">
                     <button onclick="toggleLanguage()" class="lang-switch">
@@ -130,7 +130,7 @@
                                 Note: This is a demo contact form. For direct communication, please use the contact information above.
                             </span>
                             <span class="zh-content">
-                                注意：此為示範用聯絡表單。如需直接聯繫，請使用上方的聯絡資訊。
+                                請填寫以下表單，我們會盡快回覆您的留言
                             </span>
                         </p>
                         <form action="https://formspree.io/f/xanoqpoz" method="POST" class="space-y-6">
@@ -188,7 +188,7 @@
             const newLang = currentLang === 'en' ? 'zh' : 'en';
             html.setAttribute('data-lang', newLang);
             localStorage.setItem('preferredLanguage', newLang);
-            
+
             // Track language switch
             gtag('event', 'language_switch', {
                 'from_language': currentLang,

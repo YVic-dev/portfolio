@@ -198,10 +198,20 @@ nav .container {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+    .en-content, .zh-content {
+        margin-left: 0rem;
+    }
+
+    .en-content p, .zh-content p {
+        margin-left: 0.5rem;
+    }
+
     .hero-title {
         font-size: 5rem;
-        line-height: 1.2;
+        line-height: 1;
         padding: 0.5rem 0;
+        margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
     }
     
     .skills-grid {
@@ -316,23 +326,27 @@ nav .container {
         font-size: 0.9rem;
         line-height: 0.8;
         margin-bottom: 0.5rem;
+        margin-left: 0.5rem;
     }
 
     .dsai-title {
         font-size: 1rem;
         line-height: 1;
         margin-bottom: 0;
+        margin-left: 0.5rem;
     }
 
     .description-text {
-        margin-top: 6rem;
+        margin-top: 4rem;
         font-size: 3rem;
+        margin-left: 0.5rem;
     }
 
     .role-title {
         font-size: 9rem;
         line-height: 1;
-        margin-bottom: 0.2rem;
+        margin-bottom: 0.1rem;
+        margin-left: 0.5rem;
         background: linear-gradient(135deg, var(--color-primary) 0%, #B9B28A 100%);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -355,18 +369,18 @@ nav .container {
 
     /* 調整專案圖片高度 */
     .project-card .aspect-w-16 {
-        height: 100px !important;  /* 減少專案圖片高度 */
+        height: 150px !important;  /* 從 100px 增加到 150px */
     }
     
     .project-card .aspect-w-16 img {
         object-position: center 20%;  /* 調整圖片垂直位置 */
-        height: 100px !important;  /* 確保圖片高度也是 100px */
+        height: 150px !important;  /* 確保圖片高度也是 150px */
         object-fit: cover;  /* 確保圖片填滿容器 */
     }
 
     /* 移除 aspect ratio 的限制 */
     .project-card .aspect-w-16.aspect-h-9 {
-        height: 100px !important;
+        height: 150px !important;
         aspect-ratio: auto !important;
     }
 
@@ -400,7 +414,7 @@ nav .container {
 
     /* Mobile Navigation */
     .nav-container {
-        padding: 0.35rem 1rem; /* 進一步減少上下padding */
+        padding: 0.35rem 1.5rem;  /* 增加右側 padding */
     }
 
     .nav-logo {
@@ -426,7 +440,8 @@ nav .container {
     }
 
     .language-switch {
-        margin-left: 0.35rem; /* 進一步減少語言切換按鈕左邊距 */
+        margin-left: 0.35rem;
+        margin-right: 1rem;  /* 增加右側間距 */
     }
 
     .language-switch button {
@@ -446,19 +461,120 @@ nav .container {
     .menu-toggle span {
         height: 1.5px; /* 進一步減小漢堡選單線條粗細 */
     }
+
+    /* 調整所有段落和列表項目的左側間距 */
+    p, li, .project-card, .skills-grid, .tech-stack {
+        margin-left: 0.5rem;
+    }
+
+    /* 調整導航列和 cover 之間的間距 */
+    .pt-20 {
+        padding-top: 2.5rem !important;  /* 減少頂部間距 */
+    }
+
+    /* 調整 cover 高度 */
+    .header-bg {
+        padding-top: 3rem !important;  /* 減少上方內邊距 */
+        padding-bottom: 3rem !important;  /* 減少下方內邊距 */
+    }
+
+    /* 調整 cover 到不動產視覺化的間距 */
+    section.bg-gray-50 {
+        padding-top: 1rem;  /* 減少上方間距 */
+    }
+
+    /* 調整專案標題和內容的間距 */
+    .project-card h3.section-title {
+        margin-top: 0.5rem;  /* 減少標題上方間距 */
+    }
+
+    /* 調整專案卡片的間距 */
+    .project-card {
+        margin-bottom: 1rem;  /* 減少卡片之間的間距 */
+    }
+
+    /* 調整聯絡資訊區塊的間距 */
+    .contact-section {
+        padding-top: 1rem !important;
+    }
+
+    /* 調整手機版聯絡資訊區塊的間距 */
+    header.pt-32 {
+        padding-top: 3rem !important;  /* 大幅減少上方間距 */
+    }
+
+    header.pb-20 {
+        padding-bottom: 3rem !important;  /* 減少下方間距 */
+    }
+
+    .contact-section .hero-title {
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .contact-section .text-xl {
+        margin-bottom: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    .contact-form {
+        margin-top: 0.5rem;
+    }
+
+    /* 調整主標題和內容之間的間距 */
+    .mb-16 {
+        margin-bottom: 0.75rem !important;
+    }
 }
 
 /* Footer */
 footer {
     border-top: 1px solid #e5e7eb;
+    padding: 0.5rem 0;
+}
+
+.footer-links {
+    padding: 0.25rem 0;
 }
 
 .footer-links a {
     transition: color 0.3s ease;
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
 }
 
 .footer-links a:hover {
     color: var(--color-primary);
+}
+
+/* 版權文字 */
+footer p {
+    font-size: 0.875rem;
+    padding: 0.25rem 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    footer {
+        padding: 0.1rem 0;  /* 進一步減少上下 padding */
+    }
+
+    .footer-links {
+        padding: 0.05rem 0;  /* 進一步減少連結區塊的 padding */
+    }
+
+    .footer-links a {
+        font-size: 0.65rem;  /* 進一步減小字體大小 */
+        padding: 0.05rem 0;  /* 進一步減少連結的 padding */
+    }
+
+    footer p {
+        font-size: 0.65rem;  /* 進一步減小字體大小 */
+        padding: 0.05rem 0;  /* 進一步減少版權文字的 padding */
+        margin: 0;
+    }
 }
 
 /* Institute info */
@@ -607,6 +723,24 @@ footer {
     box-shadow: 0 0 0 3px rgba(185, 178, 138, 0.1);
 }
 
+/* Form message */
+.contact-form::after {
+    content: '請填寫以下表單，我們會盡快回覆您的留言。';
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .contact-form::after {
+        font-size: 0.75rem;
+        margin-top: 0.75rem;
+    }
+}
+
 /* Grid layout improvements */
 .grid-container {
     display: grid;
@@ -689,12 +823,17 @@ footer {
         align-items: center;
         justify-content: center;
     }
+
+    .header-bg {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 /* Mobile Navigation */
 @media (max-width: 768px) {
     .nav-container {
-        padding: 0.35rem 1rem;
+        padding: 0.5rem 0.5rem;  /* 增加右側 padding */
     }
 
     .nav-logo {
@@ -721,6 +860,7 @@ footer {
 
     .language-switch {
         margin-left: 0.35rem;
+        margin-left: 0.5rem;  /* 增加右側間距 */
     }
 
     .language-switch button {
